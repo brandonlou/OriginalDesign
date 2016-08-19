@@ -1,7 +1,10 @@
 void setup() {
-  size(1000,1000);
+  size(500,500);
 }
 
 void draw() {
   ellipse(50,50,50,50);
+}
+
+void mouseClicked() {
 }
