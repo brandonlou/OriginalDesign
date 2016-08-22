@@ -1,10 +1,35 @@
 void setup() {
-  size(500,500);
+  frameRate(60);
+  size(1000,500);
+  background(255,255,255);
 }
 
 void draw() {
-  ellipse(50,50,50,50);
+	if (mousePressed && mouseButton == LEFT) {
+		drawCircle();
+
+	} else if (mousePressed && mouseButton == RIGHT) {
+		eraseCircles();
+
+	} else if(keyPressed && key == 'c') {
+		reset();
+	}
 }
 
-void mouseClicked() {
+void drawCircle() {
+	noStroke();
+	fill(random(256),random(256),random(256));
+	ellipse(mouseX, mouseY, 10, 10);
+
+}
+
+void eraseCircles() {
+	noStroke();
+	fill(255,255,255);
+	ellipse(mouseX, mouseY, 10, 10);
+
+}
+
+void reset() {
+	background(255,255,255);
 }
