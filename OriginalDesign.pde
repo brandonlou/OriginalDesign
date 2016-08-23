@@ -1,35 +1,40 @@
+float y = 1;
+float x = 1;
+
 void setup() {
-  frameRate(60);
-  size(1000,500);
-  background(255,255,255);
+	frameRate(20);
+	background(136, 139, 141);
+}
+
+void settings() {
+  size(1000, 1000, "processing.opengl.PGraphics3D");
 }
 
 void draw() {
-	if (mousePressed && mouseButton == LEFT) {
-		drawCircle();
-
-	} else if (mousePressed && mouseButton == RIGHT) {
-		eraseCircles();
-
-	} else if(keyPressed && key == 'c') {
-		reset();
-	}
+	size(1000, 1000, P3D);
+	reset();
+	drawCube();
+	drawSphere();
 }
 
-void drawCircle() {
-	noStroke();
-	fill(random(256),random(256),random(256));
-	ellipse(mouseX, mouseY, 10, 10);
-
+void drawCube() {
+	//x+=0.5;
+	y+=0.25;
+	translate(250,250,0);
+	rotateY(y);
+	rotateX(x);
+	noFill();
+	stroke(0,255,0);
+	box(40);
 }
 
-void eraseCircles() {
-	noStroke();
-	fill(255,255,255);
-	ellipse(mouseX, mouseY, 10, 10);
-
+void drawSphere() {
+	translate(500,500,0);
+	stroke(25,25,25);
+	lights();
+	sphere(100);
 }
 
 void reset() {
-	background(255,255,255);
+	background(136, 139, 141);
 }
