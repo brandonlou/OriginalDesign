@@ -8,25 +8,25 @@ int numStars = 0;
 float earthY = 0;
 float marsY = 0;
 float plutoY = 0;
-float planetX = 0;
+float XY = 0;
 
 void setup() {
 	frameRate(30);
 }
 
 void settings() {
-  size((int)w, (int)h, P3D);
+  size((int)w, (int)h, OPENGL);
 }
 
 void draw() {
 
 	lights();
-	reset();
+	resetBackground();
 
 	earthY += 0.05;
 	marsY += 0.075;
 	plutoY += 0.1;
-	planetX += 0.00001;
+	XY += 0.00001;
 
 	drawSun();
 	drawEarth();
@@ -76,7 +76,7 @@ void drawPluto() {
 }
 
 void drawX() {
-	rotateY(planetX);
+	rotateY(XY);
 	pushMatrix();
 	translate(900,h/2,0);
 	noStroke();
@@ -85,7 +85,7 @@ void drawX() {
 	popMatrix();
 }
 
-void reset() {
+void resetBackground() {
 	background(0);
 	while(numStars <= 100) {
 		fill(255);
