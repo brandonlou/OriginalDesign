@@ -82,7 +82,7 @@ void drawX() {
 void resetBackground() {
 	background(0);
 	while(numStars <= 100) {
-		fill(255);
+		fill(255,255,255);
 		float diameter = random(10);
 		ellipse(random(width),random(height), diameter,diameter);
 		numStars++;
