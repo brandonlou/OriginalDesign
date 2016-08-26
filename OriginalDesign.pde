@@ -46,7 +46,7 @@ void drawSun() {
 }
 
 void drawEarth() {
-	rotateY(earthY);
+	rotateY(radians(earthY));
 	pushMatrix();
 	translate(800,h/2,0);
 	noStroke();
@@ -56,7 +56,7 @@ void drawEarth() {
 }
 
 void drawMars() {
-	rotateY(marsY);
+	rotateY(radians(marsY));
 	pushMatrix();
 	translate(600,h/2,0);
 	noStroke();
@@ -66,7 +66,7 @@ void drawMars() {
 }
 
 void drawPluto() {
-	rotateY(plutoY);
+	rotateY(radians(plutoY));
 	pushMatrix();
 	translate(900,h/2,0);
 	noStroke();
@@ -76,7 +76,7 @@ void drawPluto() {
 }
 
 void drawX() {
-	rotateY(XY);
+	rotateY(radians(XY));
 	pushMatrix();
 	translate(900,h/2,0);
 	noStroke();
