@@ -15,12 +15,12 @@ void setup() {
 }
 
 void settings() {
-  size((int)w, (int)h, OPENGL);
+  size((int)w, (int)h, P3D);
 }
 
 void draw() {
 
-	size((int)w, (int)h, OPENGL);
+	size((int)w, (int)h, P3D);
 	lights();
 	reset();
 
