@@ -1,3 +1,5 @@
+import processing.opengl.*;
+
 float w = 1000;
 float h = 800;
 
@@ -18,7 +20,7 @@ void settings() {
 
 void draw() {
 
-	size((int)w, (int)h, P3D);
+	size((int)w, (int)h, OPENGL);
 	lights();
 	reset();
 
