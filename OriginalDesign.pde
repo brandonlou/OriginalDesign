@@ -15,7 +15,7 @@ void setup() {
 }
 
 void settings() {
-  size((int)w, (int)h, "processing.opengl.PGraphics3D");
+  size((int)w, (int)h, OPENGL);
 }
 
 void draw() {
