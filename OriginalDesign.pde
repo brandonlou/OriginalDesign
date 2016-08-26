@@ -1,8 +1,5 @@
 //import processing.opengl.*;
 
-float w = 1000;
-float h = 800;
-
 int numStars = 0;
 
 float earthY = 0;
@@ -12,7 +9,7 @@ float XY = 0;
 
 void setup() {
 	frameRate(30);
-	size((int)w, (int)h, OPENGL);
+	size(1000, 800, OPENGL);
 }
 
 void draw() {
@@ -35,7 +32,7 @@ void draw() {
 
 void drawSun() {
 	pushMatrix();
-	translate(w/2, h/2, 0);
+	translate(width/2, height/2, 0);
 	noStroke();
 	fill(255,140,0);
 	sphere(50);
@@ -45,7 +42,7 @@ void drawSun() {
 void drawEarth() {
 	rotateY(earthY);
 	pushMatrix();
-	translate(800,h/2,0);
+	translate(800,height/2,0);
 	noStroke();
 	fill(0,0,200);
 	sphere(25);
@@ -55,7 +52,7 @@ void drawEarth() {
 void drawMars() {
 	rotateY(marsY);
 	pushMatrix();
-	translate(600,h/2,0);
+	translate(600,height/2,0);
 	noStroke();
 	fill(200,0,0);
 	sphere(15);
@@ -65,7 +62,7 @@ void drawMars() {
 void drawPluto() {
 	rotateY(plutoY);
 	pushMatrix();
-	translate(900,h/2,0);
+	translate(900,height/2,0);
 	noStroke();
 	fill(0,200,0);
 	sphere(10);
@@ -75,7 +72,7 @@ void drawPluto() {
 void drawX() {
 	rotateY(XY);
 	pushMatrix();
-	translate(900,h/2,0);
+	translate(900,height/2,0);
 	noStroke();
 	fill(0,200,200);
 	sphere(45);
@@ -87,7 +84,7 @@ void resetBackground() {
 	while(numStars <= 100) {
 		fill(255);
 		float diameter = random(10);
-		ellipse(random(w),random(h), diameter,diameter);
+		ellipse(random(width),random(height), diameter,diameter);
 		numStars++;
 	}
 	numStars = 0;
